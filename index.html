@@ -1,13 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Draw a Line</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="200"
+          style="border:1px solid #000;"></canvas>
 
-<!://cdn.jsdelivr.net/npm/chart.js></script>
-<body style="margin:40px; background:#f4f5f7;">
-  <div style="width:500px; height:300px; background:#fff; padding:20px; border-radius:8px;">
-    <canvas id="g"></canvas>
-  </div>
   <script>
-    new Chart(document.getElementById('g'), {
-      type: 'bar',
-      data: { labels: ['Jan', 'Feb', 'Mar'], datasets: [{ label: 'Builds', data:, backgroundColor: '#1f5773' }] }
-    });
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(20, 20);      // starting point
+    ctx.lineTo(380, 180);    // ending point
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 4;
+    ctx.stroke();
   </script>
 </body>
+</html>
